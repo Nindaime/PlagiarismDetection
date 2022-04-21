@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="container" prefHeight="316.0" prefWidth="580.0" styleClass="mainContainer" stylesheets="@css/plagDec.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TestAppController">
+   <children>
+      <Pane id="topPane" onMouseClicked="#requestfocus" onMouseDragged="#pick" onMousePressed="#determine" onMouseReleased="#drop" prefHeight="75.0" prefWidth="569.0">
+         <children>
+            <Label contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="34.0" layoutY="10.0" text="PLAGIARISM DETECTOR" textFill="WHITE">
+               <effect>
+                  <DropShadow height="12.0" radius="5.5" width="12.0" />
+               </effect>
+               <font>
+                  <Font name="Berlin Sans FB" size="40.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="56.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <ColorAdjust />
+                     </effect>
+                     <image>
+                        <Image url="@img/app-spy-icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Button blendMode="HARD_LIGHT" cancelButton="true" layoutX="541.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeButtonAction" prefHeight="36.0" prefWidth="0.0" styleClass="close-button">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="66.0" layoutX="5.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" styleClass="no-margin">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@img/closeImage-grey.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Pane>
+      <TextField fx:id="txtFDoc1" layoutX="14.0" layoutY="105.0" onMouseClicked="#chooseDocument" prefHeight="43.0" prefWidth="276.0" promptText="Click to choose a Text File" style="-fx-background-radius: 10 0 0 10;" />
+      <Button layoutX="160.0" layoutY="209.0" mnemonicParsing="false" onAction="#checkPlagiarism" prefHeight="75.0" prefWidth="260.0" style="-fx-background-radius: 15;" text="Check Plagiarism" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font></Button>
+      <TextField fx:id="txtFDoc2" layoutX="294.0" layoutY="105.0" onMouseClicked="#chooseDocument" prefHeight="43.0" prefWidth="276.0" promptText="Click to select a Text File" style="-fx-background-radius: 0 10 10 0;" />
+      <ProgressBar fx:id="pBar" layoutX="14.0" layoutY="158.0" prefHeight="28.0" prefWidth="556.0" progress="0.0" />
+   </children>
+</AnchorPane>

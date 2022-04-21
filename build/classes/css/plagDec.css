@@ -1,0 +1,104 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 1, 2016, 7:04:22 AM
+    Author     : USER-PC
+*/
+.mainContainer, .mainContainer2, .text-area, .anchor-pane{ 
+    -fx-background-color: lavender; 
+    -fx-border-color: derive(steelblue, 10%);
+    -fx-border-width: 5;
+    /*-fx-*/
+}
+.text-area{ -fx-background-color: white; }
+#topPane, #bottomPane{ -fx-background-color: derive(steelblue, 10%); -fx-border-width: 0;}
+.button{ -fx-background-color: derive(cornflowerblue, 30%); }
+#add-button{ -fx-background-radius: 0 5 5 0; }
+#upload-uri{ -fx-background-radius: 5 0 0 5; }
+#add-button, #button-chkPlag{ -fx-background-image: url("../img/CoarseGrid.png"); }
+.table-view {
+    -fx-border-color: steelblue;
+    -fx-font: 14 Candara;
+}
+.table-view .table-column{
+    -fx-text-fill: derive(steelblue, -40%);
+    -fx-border-color: transparent steelblue;
+}
+.table-view .column-header, .table-view .filler{
+    -fx-background-color: steelblue;
+    -fx-border-color: white;
+}
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font: 18 Candara;
+}
+#column-index{
+    -fx-alignment: center;
+    -fx-border-color: transparent steelblue transparent transparent;
+    -fx-background-color: steelblue;
+    -fx-text-fill: white;
+    -fx-font: 16 Arimo;
+}
+#status-column{ -fx-alignment: center;}
+.close-button{
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+.close-button:hover{
+    -fx-effect: innershadow(three-pass-box, white, 2, 0.6, 0, 0);
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+}
+.scroll-bar{
+    -fx-cursor: hand;
+    -fx-unit-increment: 1.5;
+    -fx-margin: 0 1;
+}
+.scroll-bar *{
+    -fx-pref-width: 8.5;
+}
+.scroll-bar .thumb{
+    -fx-background-radius: 50;
+    -fx-background-color: derive(steelblue, -20%);
+}
+.scroll-bar .decrement-button, .scroll-bar .increment-button{
+    -fx-padding: 1;
+}
+.scroll-bar .decrement-arrow,.scroll-bar .increment-arrow{
+    -fx-background-color: steelblue;
+}
+.page-label{
+    -fx-font: 40 "berlin sans fb";
+}
+.text-area, .anchor-pane{ 
+    -fx-border-width: 2;
+    -fx-effect: innershadow(three-pass-box, rgba(0,0,0,0.6), 5,0,0,0);
+}
+#plag-bookmark{
+    -fx-background-color: white;
+    -fx-border-color: steelblue;
+}
+#plag-bookmark .button{
+    -fx-background-radius: 0;
+    -fx-pref-height: 10;
+    -fx-font-size: 1;
+    -fx-padding: 0;
+}
+#file-label-1, #file-label-2{
+    -fx-font: 20 Candara;
+    -fx-border-color: steelblue;
+    -fx-border-width: 2;
+}
+#file-label-1 .label, #file-label-2 .label{
+    -fx-text-fill: white;
+}
+#file-label-1 .hash, #file-label-2 .hash{
+    -fx-background-color: steelblue;
+    -fx-padding: 0 10;
+}
+#plag-arrow{
+    -fx-effect: dropshadow(three-pass-box, steelblue, 2, 0.8, 0, 0);
+}
